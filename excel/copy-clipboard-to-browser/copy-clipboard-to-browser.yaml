@@ -6,7 +6,7 @@
  crontab: none
  triggers:
    # hotkey to trigger this routine
-   - key.wait("ctrl+ctrl")
+   - key.wait("esc+esc")
 
  inputs: none
 
@@ -19,7 +19,6 @@
    # e.g., a table  0    1  will converted to [ [0,1], [2,3] ]
    #                2    3  
    - data.load("clipboard") => $items
-   - cmd.sleep("3s")
 
    # get values from the list each iteration
    - cmd.foreach($items) => $item
