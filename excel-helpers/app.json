@@ -1,0 +1,16 @@
+{
+    "app": "excel-quick-actions",
+    "logo": "logo-excel.svg",
+    "tasks": [
+        {
+            "task": "copy-clipboard-to-browser",
+            "desc": "copy excel table from clipboard to a non-standard form in browser",
+            "demo": "",
+            "triggers": {
+                "key": "ctrl+ctrl",
+                "active_win_name": "chrome"
+            },
+            "inputs": {}
+        }
+    ]
+}
