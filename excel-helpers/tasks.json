@@ -1,0 +1,11 @@
+{
+    "app": "workspace-quick-actions",
+    "logo": "logo-excel.svg",
+    "source": "https://github.com/AbaTech/",
+    "tasks": [
+        {
+            "path": "copy-clipboard-to-browser.yaml",
+            "stamp": "2021-08-01T00:00:00.000Z"
+        }
+    ]
+}
