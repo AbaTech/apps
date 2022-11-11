@@ -6,19 +6,14 @@
    # Load data from clipboard to a list of data
    # e.g., a table  0    1  will converted to [ [0,1], [2,3] ]
    #                2    3  
-   - data.load(clipboard) => $items
+   - data.read(clipboard) => $items
 
    # Iterate through the values from clipboard
    # e.g., index=0, $item=[0,1]
    #       index=1, $item=[2,3]
-   - cmd.for_each($items) => $index, $item:
-      - data.get($item, {{ [0,1] }}) => $stat, $rate
-      - key.enter($stat)
+   - cmd.foreach($items) => $index, $item:
+      - key.type({{ $item[0] }}, Tab)
 
-      # press "tab" key to switch to next input field
-      - key.press(tab)
+      # Enter 2nd data from $item, and press Tab * 2
+      - key.type({{ $item[1] }}, Tab+Tab)
 
-      # enter 2nd data from $item
-      - key.enter($rate)
-      - key.press(tab)
-      - key.press(tab)
